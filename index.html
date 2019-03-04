@@ -86,8 +86,6 @@ br {
     messagingSenderId: "779400447265"
   };
   firebase.initializeApp(config);
-</script>
-<?php
 	
 namespace Firebase;
 require_once __DIR__ . '/../src/firebaseLib.php';
@@ -211,7 +209,9 @@ date_default_timezone_set("America/Sao_Paulo");
 //$phoenix = mysqli_fetch_array($conn->query("SELECT phoenix FROM pontuacao ORDER by id DESC LIMIT 1"));
 //$griffin = mysqli_fetch_array($conn->query("SELECT griffin FROM pontuacao ORDER by id DESC LIMIT 1"));
 //$unicorn = mysqli_fetch_array($conn->query("SELECT unicorn FROM pontuacao ORDER by id DESC LIMIT 1"));
+</script>
 
+<?php
 class patrol {
     var $name;
     var $score;
