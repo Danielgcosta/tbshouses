@@ -1,9 +1,4 @@
-<html>
-<head><title>Testing database access</title></head>
-<body>
-<div id='main'>
-<h1>Testing database access</h1>
-</div>
+
 
 <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
 <script>
@@ -32,27 +27,38 @@ houses.doc("unicorn").update({
 	score: 12;});
 	
 var dragon = houses.where("name", "==", "dragon");
-<?php echo $dragon ?>
 var griffin = houses.where("name", "==", "griffin");
 var phoenix = houses.where("name", "==", "phoenix");
 var unicorn = houses.where("name", "==", "unicorn");
 </script>
 
-<!--
 <?php 
-class house {
-    var $name;
-    var $score;
-    var $image;
-}
+	class house {
+		var $name;
+		var $score;
+	}
 
-//$dragon = new house();
-//$dragon.name = dragon->name;
-//$dragon.score = dragon->score;
-
-echo $dragon->score; 
+	$DRAG = new house();
+	$DRAG.name = $dragon.name;
+	$DRAG.score = $dragon.score;
+	echo $DRAG.name;
+	echo $DRAG.score;
+	echo $dragon.name;
+	echo $dragon.score;	
 ?>
--->
 
-</body>
+<html>
+	<head><title>Testing database access</title></head>
+	<body>
+		<div id='main'>
+			<h1>Testing database access now!</h1>
+			<h1>
+<?php echo $DRAG.name
+echo $DRAG.score;
+echo $dragon.name;
+echo $dragon.score;			
+?></h1>
+			<h1>Any problems?</h1>
+		</div>
+	</body>
 </html>
