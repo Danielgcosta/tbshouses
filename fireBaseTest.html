@@ -15,10 +15,21 @@
  // Get a reference to the database service
  var database = firebase.database();
  var houses = database.collection("score");
-
-houses.doc("score").set({name: "dragon" value: 42;});
-houses.doc("score").set({name: "phoenix" value: 42;});
-houses.doc("score").set({name: "unicorn" value: 42;});
-houses.doc("score").set({name: "griffin" value: 42;});
+ var query = houses.where("state", "==", "CA");
+ 
+houses.doc("score").set({
+	name: "dragon", 
+	value: 42;});
+houses.doc("score").set({name: "phoenix", value: 42;});
+houses.doc("score").set({name: "unicorn", value: 42;});
+houses.doc("score").set({name: "griffin", value: 42;});
 
 </script>
+<html>
+<head><title>Testing database access</title></head>
+<body>
+<div id='main'>
+<h1>Testing database access</h1>
+</div>
+</body>
+</html>
