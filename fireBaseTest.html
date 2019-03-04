@@ -1,5 +1,3 @@
-
-
 <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
 <script>
  // Initialize Firebase
@@ -11,21 +9,11 @@
     storageBucket: "tbs-houses.appspot.com",
     messagingSenderId: "779400447265"
  };
- firebase.initializeApp(config);
- 
- // Get a reference to the database service
- var database = firebase.database();
- var houses = database.collection("houses");
- 
-houses.doc("dragon").update({
-	score: 42;});
-houses.doc("griffin").update({
-	score: 5;});	
-houses.doc("phoenix").update({
-	score: 13;});
-houses.doc("unicorn").update({
-	score: 12;});
-	
+firebase.initializeApp(config);
+
+// Get a reference to the database service
+var database = firebase.database();
+var houses = database.collection("houses"); 
 var dragon = houses.where("name", "==", "dragon");
 var griffin = houses.where("name", "==", "griffin");
 var phoenix = houses.where("name", "==", "phoenix");
@@ -39,8 +27,10 @@ var unicorn = houses.where("name", "==", "unicorn");
 	}
 
 	$DRAG = new house();
-	$DRAG.name = $dragon.name;
-	$DRAG.score = $dragon.score;
+	$aux1 = 11;
+	@aux2 = 2;
+	$DRAG.name = $aux1;
+	$DRAG.score = $aux2;
 	echo $DRAG.name;
 	echo $DRAG.score;
 	echo $dragon.name;
@@ -53,11 +43,10 @@ var unicorn = houses.where("name", "==", "unicorn");
 		<div id='main'>
 			<h1>Testing database access now!</h1>
 			<h1>
-<?php echo $DRAG.name
-echo $DRAG.score;
-echo $dragon.name;
-echo $dragon.score;			
-?></h1>
+			<?php 
+				echo $DRAG.name;
+			?>
+			</h1>
 			<h1>Any problems?</h1>
 		</div>
 	</body>
