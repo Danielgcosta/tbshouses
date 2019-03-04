@@ -25,13 +25,13 @@
  var database = firebase.database();
  var houses = database.collection("houses");
  
-houses.doc("dragon").set({
+houses.doc("dragon").update({
 	score: 42;});
-houses.doc("phoenix").set({
+houses.doc("phoenix").update({
 	score: 13;});
-houses.doc("unicorn").set({
+houses.doc("unicorn").update({
 	score: 12;});
-houses.doc("griffin").set({
+houses.doc("griffin").update({
 	score: 5;});
 </script>
 
