@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: black;
+	background-repeat: no-repeat;		
+    font-size: 100%;
+	width: 1870px;
+	height: 1020px;
+}
+h1 {
+    background-color: transparent;
+    color: white;
+    font-family: helvetica;
+    font-size: 400%;
+	text-align: center;
+    text-decoration: none;	
+}
+h2{
+    color: black;
+    font-family: helvetica;
+	font-size: 40px;	
+	font-variant: small-caps;	
+	font-weight: bold;	
+	line-height:0px;	
+	text-align: center;
+}
+h3{
+	color: black;
+	font-family: arial;
+    font-size: 90%;	
+	margin: 0px;
+    padding: 0px;
+	text-align: center;
+}
+h4{
+    color: white;
+    font-family: arial;
+    font-size: 90%;		
+	margin: 0px;
+    padding: 0px;
+	padding-right: 0px;
+	text-align: right;
+}
+p  {
+    color: red;
+    font-family: arial;
+    font-size: 200%;
+	margin: 5px;
+	padding: 0px;
+	text-align: center;
+}
+p2{
+    color: white;
+    font-family: arial;
+    font-size: 250%;
+	margin: 5px;
+	padding: 0px;
+	text-align: center;
+}
+table{
+	width: 560px;
+    border: 0px solid black;	
+	text-align: center;	
+}
+th, td {
+    border: 0px solid black;	
+	text-align: center;
+}
+br {
+   display: block;
+   margin: 0px 0;
+}
+</style>
+</head>
+<?php
+$hostname = "mysql.hostinger.com.br";
+$username = "u623005944_user";
+$password = "LTe6UxsStMC4eU";
+$dbname = "u623005944_db";
+$conn = new mysqli($hostname, $username, $password, $dbname);
+
+date_default_timezone_set("America/Sao_Paulo");
+// Here goes value from database
+$dragon =  mysqli_fetch_array($conn->query("SELECT dragon FROM pontuacao ORDER BY id DESC LIMIT 1"));
+$phoenix = mysqli_fetch_array($conn->query("SELECT phoenix FROM pontuacao order by id desc limit 1"));
+$griffin = mysqli_fetch_array($conn->query("SELECT griffin FROM pontuacao order by id desc limit 1"));
+$unicorn = mysqli_fetch_array($conn->query("SELECT unicorn FROM pontuacao order by id desc limit 1"));
+
+class patrol {
+    var $name;
+    var $score;
+    var $image;
+}
+
+$patrol1 = new patrol();
+$patrol1->name = "Dragon";
+$patrol1->score = $dragon[0];
+$patrol1->image = "dragon.png";
+$background[0] = "spotlight_dragon.png";
+
+$patrol2 = new patrol();
+$patrol2->name = "Phoenix";
+$patrol2->score = $phoenix[0];
+$patrol2->image = "phoenix.png";
+$background[1] = "spotlight_phoenix.png";
+
+$patrol3 = new patrol();
+$patrol3->name = "Griffin";
+$patrol3->score = $griffin[0];
+$patrol3->image = "griffin.png";
+$background[2] = "spotlight_griffin.png";
+
+$patrol4 = new patrol();
+$patrol4->name = "Unicorn";
+$patrol4->score = $unicorn[0];
+$patrol4->image = "unicorn.png";
+$background[3] = "spotlight_unicorn.png";
+
+// Prepare data for sorting
+$scores = array($patrol1->score, $patrol2->score, $patrol3->score, $patrol4->score);
+$patrols = array($patrol1->name, $patrol2->name, $patrol3->name, $patrol4->name);
+$images = array($patrol1->image, $patrol2->image, $patrol3->image, $patrol4->image);
+
+//Sort data (ascending)
+array_multisort($scores, $patrols, $images, $background);
+?>
+
+<body background="<?php echo $background[3]; ?>">
+<h1>The British School Rio de Janeiro</h1><br>
+<p>Barra Site</p>
+<p>Houses Scoreboard</p><br>
+	<div>
+		<table cellspacing="0px" cellpadding="0px" border="0px" height="0px">
+			<th>
+				<img src="<?php echo $images[3]; ?>" alt="" style="width:556px;height:615px;"/><br>			
+			</th>
+			<th>
+				<p2><?php echo $patrols[3]; ?></p2><br>
+				<img src="<?php echo $images[3]; ?>" alt="" style="width:140px;height:140px;"/><br>
+				<p2><?php echo $scores[3]; ?></p2>
+				<img src="<?php echo "pillar_1.png"; ?>" alt="" style="width:175px;height:416px;"/>
+			</th>				
+			<th>
+				<br><br><br><br>
+				<p2><?php echo $patrols[2]; ?></p2><br>
+				<img src="<?php echo $images[2]; ?>" alt="" style="width:140px;height:140px;"/><br>
+				<p2><?php echo $scores[2]; ?></p2>
+				<img src="<?php echo "pillar_2.png"; ?>" alt="" style="width:175px;height:350px;"/>
+			</th>			
+			<th>
+				<br><br><br><br><br><br><br><br>
+				<p2><?php echo $patrols[1]; ?></p2><br>
+				<img src="<?php echo $images[1]; ?>" alt="" style="width:140px;height:140px;"/><br>
+				<p2><?php echo $scores[1]; ?></p2>
+				<img src="<?php echo "pillar_3.png"; ?>" alt="" style="width:175px;height:284px;"/>
+			</th>
+			<th>
+				<br><br><br><br><br><br><br><br><br><br><br><br>
+				<p2><?php echo $patrols[0]; ?></p2><br>
+				<img src="<?php echo $images[0]; ?>" alt="" style="width:140px;height:140px;"/><br>
+				<p2><?php echo $scores[0]; ?></p2>
+				<img src="<?php echo "pillar_4.png"; ?>" alt="" style="width:175px;height:217px;"/>			
+			</th>	
+			<th>
+				<img src="<?php echo $images[3]; ?>" alt="" style="width:556px;height:615px;"/><br>		
+			</th>
+		</table>
+	</div>
+</body>
+
+<body>
+<br><br><br><br>
+<h4>Last update: <?php echo  date("d/m/Y - H:i:s"); ?></h4>
+</body>
+</html>
