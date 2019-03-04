@@ -98,9 +98,9 @@ $conn = new mysqli($hostname, $username, $password, $dbname);
 date_default_timezone_set("America/Sao_Paulo");
 // Here goes value from database
 $dragon =  mysqli_fetch_array($conn->query("SELECT dragon  FROM pontuacao ORDER BY id DESC LIMIT 1"));
-$phoenix = mysqli_fetch_array($conn->query("SELECT phoenix FROM pontuacao ORDER by id desc limit 1"));
-$griffin = mysqli_fetch_array($conn->query("SELECT griffin FROM pontuacao ORDER by id desc limit 1"));
-$unicorn = mysqli_fetch_array($conn->query("SELECT unicorn FROM pontuacao ORDER by id desc limit 1"));
+$phoenix = mysqli_fetch_array($conn->query("SELECT phoenix FROM pontuacao ORDER by id DESC LIMIT 1"));
+$griffin = mysqli_fetch_array($conn->query("SELECT griffin FROM pontuacao ORDER by id DESC LIMIT 1"));
+$unicorn = mysqli_fetch_array($conn->query("SELECT unicorn FROM pontuacao ORDER by id DESC LIMIT 1"));
 
 class patrol {
     var $name;
