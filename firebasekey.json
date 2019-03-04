@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "tbs-houses",
+  "private_key_id": "ffb74d84feaa25392232c2e3bbba94eb2c68d1a8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDUERnENeGpLtGd\n1DTq1VIquKY3F4osQImHoSixvU/iGvaMmuGtXh+Fsrk5tGrD2ja4Z8CJQ/sWX08d\nniFh0Tj4I+hG2JlQpKRkEBfptQIMV1ye4XRiCE9Ul2IEjLGY6D69af9pRkLC1kNx\nYoP77+QbtvYMzHUzC1i7Clxx9kqocP1d3bArr2DfF55uG/JbDSblP6+I8fCiGjri\nSzcLUatv/HH2Edbme4POu++aigt0B13jGEdj9KSzVfpBNusCmrwJO2dDrAoZonEK\nTFcD6GX7OFA6yvbD+oEx5SGlw3D0TM5CSbL+yR3OW2aL6ZKQpH4C37hr6lU6Ypqj\n7ejhl3yBAgMBAAECggEAG9dS5qucQLXg1zOw7tOqwekUCU+R2FVwuNmzmgIcprab\nf8IltrkQsmDQaH8DNUtEu9kDMgI2yK0imeTUxR7Ot+Ue7Y4qMqgq3Ogv+4LEDhK6\nGjHHMcedgqGNQMOn3UdAVWXBHnUW9rVijVQ9t6m67NiMXQnKqTToJUYq9Ns82fge\nXNcmTrMQXbaucYdlwp8S/Xg2Qo444SynevL5Arjnz97lTvxAHzgKbkqSb9hAUqXz\nSwOJr9WQU97akRrVbdhwu6W6oh8Y2MO1vnfOkooB/lZo+1Bs7RCEv2M6mu1u5Cop\nW9PgA4CaG5ZPlZKlTUxT1PaWmnsDjQUGy6R4poVycQKBgQDq91/x+GyQ9PmRce7R\n/pn85SNM0a7UtMNK/0rCuRGo/SDHuCzKqNDknvVXBN1HtG1dXGpo/MHSqGsqKaW+\nz+nKiV/6Gc+BHkXw9pvji2lfRqpgAOvy+H3zTRwqb02LZS6Eob3YiYWySjsMKnRt\np+6DI2yCC0SBs28/1lPcC6aFHwKBgQDnDPKFfo5qA9pTrGHAfpUJBGtM2phXGGCO\nyGN5vtpqNMVfzUK9HLHVJlgCjfpbZ9IABXbc/l5+c6ydZKWRVw3RH/ou7GYHBbLy\n+uNbt457cro7ZFFC8nr0AscAjPudY4cYDtYBCYl4uJlqVQOE1hib+t7QeCocH/xn\nwXvuR2sqXwKBgEZdMmRaCtkWI67Euco1PpQXYozctkiIoXtSHGdX2MwMkcZ9hxxh\nlb0BRWN713BjveSZilxKZRjayszjj/kmdlLq9M0G8bcvA673ixOHalTX6qm5XO90\nLvOvgeHLVyOJd3bMoPe5p0oPJMOt6xPzmF+5OgNvsGJPA9/QJWjeLE3tAoGADLaD\nqaC7CU5I9w2nG0ZbwPFDTilA9Jncxj50asB7mBhrO8g5gdpQVqATe6CARANEZMfo\nMGS2olKPDuH40jRuCDGwPGC5hG1l2UTAuc0xw80ePiJY7kwVQ9PbS0Z2mcReLI60\na74wmDngBx/CX86/7+Uv2VyjRITmCHd28DdxyBUCgYEAy6CdwdA2jekNqDOyPEJU\nvSLEcRX5IFWhGiLS4gjafVqCHXiJswsHV0BZXVMbicDwTl5ycJdwXFxGgcbS2LXG\ni/8eGJ/VTes1mz7yn7kBBBbP40HYADD7IaxCI3kOgsvhP3uXFmwi+hr5ro3HyB9W\nhmjXtdQWNs9L2vWE5Xz5k3s=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-n3jqw@tbs-houses.iam.gserviceaccount.com",
+  "client_id": "109642704692759565050",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-n3jqw%40tbs-houses.iam.gserviceaccount.com"
+}

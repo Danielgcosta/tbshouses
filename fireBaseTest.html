@@ -1,15 +1,23 @@
-<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
 <script>
- // Initialize Firebase
- require './lib/firebaseLib.php';
- var config = {
-    apiKey: "AIzaSyAJyp94kUdJ1ozBxbTTnu45F4S3L1Y8K3U",
-    authDomain: "tbs-houses.firebaseapp.com",
-    databaseURL: "https://tbs-houses.firebaseio.com",
-    projectId: "tbs-houses",
-    storageBucket: "tbs-houses.appspot.com",
-    messagingSenderId: "779400447265"
- };
+var admin = require("firebase-admin");
+var serviceAccount = require("./firebasekey.json");
+var firebaselib = require ("./lib/firebaseLib.php");
+ 
+admin.initializeApp({
+	credential: admin.credential.cert(serviceAccount),
+	databaseURL: "https://tbs-houses.firebaseio.com"
+});
+
+// Initialize Firebase
+var config = {
+	apiKey: "b3bdsmHKuoK4PKBq6sKOaoufTe7WJ9hzP4Y2vJrI",
+	authDomain: "tbs-houses.firebaseapp.com",
+	databaseURL: "https://tbs-houses.firebaseio.com",
+	projectId: "tbs-houses",
+	storageBucket: "tbs-houses.appspot.com",
+	messagingSenderId: "779400447265"
+};
 firebase.initializeApp(config);
 
 // Get a reference to the database service
@@ -21,7 +29,18 @@ var phoenix = houses.where("name", "==", "phoenix");
 var unicorn = houses.where("name", "==", "unicorn");
 </script>
 
+<html>
+	<head><title>Testing database access</title></head>
+	<body>
+		<div id='main'>
+			<h1>Testing database access now!</h1>
+			<h1>
 <?php 
+
+ $url = 'https://tbs-houses.firebaseio.com';
+ $token = 'b3bdsmHKuoK4PKBq6sKOaoufTe7WJ9hzP4Y2vJrI';
+ $firebase = new Firebase($url, $token);
+ $firebase.get('');
 	class house {
 		var $name;
 		var $score;
@@ -37,16 +56,6 @@ var unicorn = houses.where("name", "==", "unicorn");
 	echo $dragon.name;
 	echo $dragon.score;	
 ?>
-
-<html>
-	<head><title>Testing database access</title></head>
-	<body>
-		<div id='main'>
-			<h1>Testing database access now!</h1>
-			<h1>
-			<?php 
-				echo $DRAG.name;
-			?>
 			</h1>
 			<h1>Any problems?</h1>
 		</div>
