@@ -173,5 +173,21 @@ array_multisort($scores, $patrols, $images, $background);
 <body>
 <br><br><br><br>
 <h4>Last update: <?php echo  date("d/m/Y - H:i:s"); ?></h4>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAJyp94kUdJ1ozBxbTTnu45F4S3L1Y8K3U",
+    authDomain: "tbs-houses.firebaseapp.com",
+    databaseURL: "https://tbs-houses.firebaseio.com",
+    projectId: "tbs-houses",
+    storageBucket: "tbs-houses.appspot.com",
+    messagingSenderId: "779400447265"
+  };
+  firebase.initializeApp(config);
+</script>
+
 </body>
 </html>
