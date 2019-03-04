@@ -4,13 +4,10 @@
 <div id='main'>
 <h1>Testing database access</h1>
 </div>
-</body>
-</html>
 
 <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
 <script>
  // Initialize Firebase
- // TODO: Replace with your project's customized code snippet
  var config = {
     apiKey: "AIzaSyAJyp94kUdJ1ozBxbTTnu45F4S3L1Y8K3U",
     authDomain: "tbs-houses.firebaseapp.com",
@@ -27,11 +24,32 @@
  
 houses.doc("dragon").update({
 	score: 42;});
+houses.doc("griffin").update({
+	score: 5;});	
 houses.doc("phoenix").update({
 	score: 13;});
 houses.doc("unicorn").update({
 	score: 12;});
-houses.doc("griffin").update({
-	score: 5;});
+	
+var dragon = houses.where("name", "==", "dragon");
+var griffin = houses.where("name", "==", "griffin");
+var phoenix = houses.where("name", "==", "phoenix");
+var unicorn = houses.where("name", "==", "unicorn");
 </script>
 
+<?php 
+class house {
+    var $name;
+    var $score;
+    var $image;
+}
+
+$patrol1 = new house();
+$patrol1->name = dragon.name;
+$patrol1->score = dragon.score;
+
+echo $images[3]; 
+?>
+
+</body>
+</html>
