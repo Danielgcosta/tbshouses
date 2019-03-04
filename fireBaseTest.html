@@ -23,19 +23,15 @@
  
  // Get a reference to the database service
  var database = firebase.database();
- var houses = database.collection("score");
+ var houses = database.collection("houses");
  
-houses.doc("score").set({
-	name: "dragon", 
-	value: 42;});
-houses.doc("score").set({
-	name: "phoenix", 
-	value: 42;});
-houses.doc("score").set({
-	name: "unicorn", 
-	value: 42;});
-houses.doc("score").set({
-	name: "griffin", 
-	value: 42;});
+houses.doc("dragon").set({
+	score: 42;});
+houses.doc("phoenix").set({
+	score: 13;});
+houses.doc("unicorn").set({
+	score: 12;});
+houses.doc("griffin").set({
+	score: 5;});
 </script>
 
