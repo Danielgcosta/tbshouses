@@ -1,0 +1,14 @@
+{
+    "name": "daniel/tbshouses",
+    "type": "project",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Daniel Costa",
+            "email": "friendschampionship@gmail.com"
+        }
+    ],
+    "require": {
+        "kreait/firebase-php": "1.2.2"
+    }
+}
